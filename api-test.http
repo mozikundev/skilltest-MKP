@@ -1,0 +1,9 @@
+POST /rest-api.php HTTP/1.1
+Host: your-api-domain.com
+Authorization: Bearer your_valid_jwt_token
+Content-Type: application/json
+
+{
+  "name_gate": "Terminal A",
+  "gate_status": "entrance_gate"
+}
