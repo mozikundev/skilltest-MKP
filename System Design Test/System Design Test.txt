@@ -1,0 +1,14 @@
+Berikut penjelasan dari rancangan sistem pada diagram.
+
+# Jika tersedia koneksi internet
+
+  - Sistem akan me-record data kendaraan masuk dari gate 1/2/3/4 dan menyimpan data tersebut di dalam local storage atau database.
+  - Pada saat sistem mendeteksi adanya kendaraan masuk, setelah menyimpannya secara lokal sistem akan mengupdate data ke server pusat.
+  - Pada saat sistem mendeteksi adanya kendaraan keluar, setelah menyimpannya secara lokal sistem akan menghitung biaya yang harus dibayarkan dan mengupdate data dan status pada database pusat.
+
+# Jika tidak tersedia koneksi internet
+
+  - Sistem hanya akan menyimpan data secara lokal dan memberikan status sebagai "Pending Payment"
+  - Jika sistem sudah terhubung internet kembali, sistem akan berjalan sesuai dengan keadaan jika tersedia koneksi internet.
+  - Mengecek data dengan status "Pending Payment", melakukan update pada database pusat, dan melakukan proses pembayaran.
+  - Disini saya mengasumsikan kartu pre-paid dapat melakukan tagihan secara tidak langsung atau dengan kurun waktu maksimal 24 jam.
