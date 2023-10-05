@@ -1,15 +1,7 @@
 <?php
+require_once 'conn.php';
 require_once 'vendor/autoload.php'; // Include JWT library
 use Firebase\JWT\JWT;
-
-// Your database connection information
-$dbHost = 'localhost';
-$dbUsername = 'your_username';
-$dbPassword = 'your_password';
-$dbName = 'your_database';
-
-// Establish a database connection
-$conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
 // Check for connection errors
 if ($conn->connect_error) {
